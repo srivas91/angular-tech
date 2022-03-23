@@ -1,0 +1,18 @@
+.cls1
+{
+    background-color: yellow;
+}
+.cls2
+{
+   color: red;
+}
+
+.show
+{
+    display: block;
+}
+
+.hide
+{
+    display: none;
+}

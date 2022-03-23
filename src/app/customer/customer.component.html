@@ -1,0 +1,21 @@
+<p>customer works!</p>
+<form action="#" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" method="get">
+    <input type="text" name="username" id="" #userForm ngModel required><br/>
+    <input type="password" name="password" id="" #userForm ngModel required>
+    <div *ngIf="userForm.invalid">
+    <input type="submit" [disabled]="status" value="login">
+</div>
+<div *ngIf="userForm.valid">
+    <input type="submit" [disabled]="!status" value="login">
+</div>
+</form>
+
+<pre>{{userForm.value|json}}</pre>
+<pre>not touched-{{userForm.untouched}}</pre>
+<pre>touched-{{userForm.touched}}</pre>
+<pre>submitted-{{userForm.submitted}}</pre>
+<pre>valid-{{userForm.valid}}</pre>
+<pre>invalid-{{userForm.invalid}}</pre>
+<pre>not modified-{{userForm.pristine}}</pre>
+<pre>modified-{{userForm.dirty}}</pre>
+
